@@ -1,0 +1,6 @@
+spring:
+  application:
+  name: commonEntity
+
+server:
+  port: 8081
