@@ -1,6 +1,7 @@
 package com.mutualfund.commonentity.entities;
 
 import com.mutualfund.commonentity.abstracts.BaseEntity;
+import com.mutualfund.commonentity.enums.SocietyStatus;
 import com.mutualfund.commonentity.enums.Status;
 import jakarta.persistence.*;
 import lombok.*;
@@ -20,14 +21,14 @@ public class Society extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "society_id")
+//    @Column(name = "societyId")
     private Long societyId;
 
     @ManyToOne
-    @JoinColumn(name = "owner_id", nullable = false)
+    @JoinColumn(name = "ownerId", nullable = false)
     private Owners owner;
 
-    private String name;
+    private String societyName;
 
     @Lob
     private String address;
@@ -46,7 +47,7 @@ public class Society extends BaseEntity {
     private Integer totalMonth;
 
     @Enumerated(EnumType.STRING)
-    private Status status;
+    private SocietyStatus societyStatus;
 
     // Relations
     @OneToMany(mappedBy = "society", cascade = CascadeType.ALL)

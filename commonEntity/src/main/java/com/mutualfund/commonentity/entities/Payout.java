@@ -15,7 +15,7 @@ public class Payout extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "payout_id")
+//    @Column(name = "payoutId")
     private Long payoutId;
 
     private Integer reference1;
@@ -26,6 +26,6 @@ public class Payout extends BaseEntity {
     private WinType winType;
 
     @ManyToOne
-    @JoinColumn(name = "member_id", nullable = false)
+    @JoinColumn(name = "memberId", nullable = false)
     private Members member;
 }

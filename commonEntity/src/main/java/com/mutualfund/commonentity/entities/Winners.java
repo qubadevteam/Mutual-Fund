@@ -17,7 +17,7 @@ public class Winners extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "winner_id")
+//    @Column(name = "winnerId")
     private Long winnerId;
 
     private LocalDate winDate;
@@ -26,10 +26,10 @@ public class Winners extends BaseEntity {
     private WinType winType;
 
     @ManyToOne
-    @JoinColumn(name = "society_id", nullable = false)
+    @JoinColumn(name = "societyId", nullable = false)
     private Society society;
 
     @ManyToOne
-    @JoinColumn(name = "member_id", nullable = false)
+    @JoinColumn(name = "memberId", nullable = false)
     private Members member;
 }

@@ -18,11 +18,11 @@ public class Payment extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "payment_id")
+//    @Column(name = "paymentId")
     private Long paymentId;
 
     @ManyToOne
-    @JoinColumn(name = "member_id", nullable = false)
+    @JoinColumn(name = "memberId", nullable = false)
     private Members member;
 
     private LocalDateTime paymentDate;

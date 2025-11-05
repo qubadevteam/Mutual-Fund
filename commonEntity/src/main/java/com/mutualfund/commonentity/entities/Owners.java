@@ -15,11 +15,11 @@ public class Owners extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "owner_id")
+//    @Column(name = "ownerId")
     private Long ownerId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private Users user;
 
     @Lob

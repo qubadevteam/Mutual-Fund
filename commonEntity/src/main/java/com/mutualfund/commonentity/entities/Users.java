@@ -18,10 +18,10 @@ public class Users extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "user_id")
+//    @Column(name = "userId")
     private Long userId;
 
-    private String userName;
+    private String fullName;
 
     private String contactNumber;
 

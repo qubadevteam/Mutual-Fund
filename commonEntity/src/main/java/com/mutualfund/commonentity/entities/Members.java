@@ -18,15 +18,15 @@ public class Members extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-//    @Column(name = "member_id")
+//    @Column(name = "memberId")
     private Long memberId;
 
     @ManyToOne
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     private Users user;
 
     @ManyToOne
-    @JoinColumn(name = "society_id", nullable = false)
+    @JoinColumn(name = "societyId", nullable = false)
     private Society society;
 
     private Integer receivedAmount;
