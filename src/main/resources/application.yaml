@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: userService
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/mutualfund
+    username: root
+    password: Arman@2004
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 9090
